@@ -3,7 +3,7 @@
     <b-table :fields="fields" :items="teachers">
       <template #cell(name)="data">
         <!-- `data.value` is the value after formatted by the Formatter -->
-        <router-link :to="`/teachers/${data.index}`">{{
+        <router-link :to="`/single/teachers/${data.index}`">{{
           data.value
         }}</router-link>
       </template>
