@@ -23,7 +23,7 @@ const router = new VueRouter({
       component: Teachers,
     },
     { path: "/students", name: "students", component: Students },
-    { path: "/eachone", name: "eachone", component: EachOne },
+    { path: "/teachers/:id", name: "eachone", component: EachOne },
   ]
 })
 

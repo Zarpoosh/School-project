@@ -3,8 +3,7 @@
     <div class="menu">
       <router-link to="/">Home</router-link> |
       <router-link to="/teachers">Teachers</router-link> |
-      <router-link to="/students">Students</router-link> |
-      <router-link to="/eachone">EachOne</router-link>
+      <router-link to="/students">Students</router-link>
     </div>
 
     <b-container>

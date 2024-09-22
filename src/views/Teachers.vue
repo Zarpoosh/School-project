@@ -1,6 +1,13 @@
 <template>
   <div>
-    <b-table striped hover :items="teachers"></b-table>
+    <b-table :fields="fields" :items="teachers">
+      <template #cell(name)="data">
+        <!-- `data.value` is the value after formatted by the Formatter -->
+        <router-link :to="`/teachers/${data.index}`">{{
+          data.value
+        }}</router-link>
+      </template>
+    </b-table>
   </div>
 </template>
 

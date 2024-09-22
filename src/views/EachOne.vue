@@ -1,5 +1,5 @@
 <template>
-  <div>Each user </div>
+  <div>{{ $route.params.id }} </div>
 </template>
 
 <script>
