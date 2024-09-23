@@ -2,7 +2,6 @@
   <div>
     <b-table :fields="fields" :items="teachers">
       <template #cell(name)="data">
-        <!-- `data.value` is the value after formatted by the Formatter -->
         <router-link :to="`/single/teachers/${data.index}`">{{
           data.value
         }}</router-link>
@@ -12,14 +11,17 @@
 </template>
 
 <script>
-import teachers from "@/data/teachers";
+import { mapState } from "pinia";
+// import teachers from "../data/teachers";
 export default {
   data() {
     return {
-      teachers,
     };
+  },
+  computed: {
+    ...mapState(['teachers'])
   },
 };
 </script>
 
-<style></style>
+<style scoped></style>

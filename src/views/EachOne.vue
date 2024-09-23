@@ -9,13 +9,22 @@
 
 <script>
 import router from "@/router";
-
+import { mapState } from "pinia";
 export default {
+  data() {
+    return { single: {} };
+  },
+  computed: {
+    ...mapState(["teachers", "students"]),
+  },
+  mounted() {
+    const user = this[this.$route.params.cat][this.$route.params.id];
+    this.single = user;
+  },
   methods: {
     aliclick() {
-      // console.log("click ali")
       // router.push("/");
-      router.go("-1")
+      router.go("-1");
     },
   },
 };
